@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SignupView.swift
 //  KitchenCart
 //
 //  Created by Suyash Vashishtha on 10/11/23.
@@ -7,15 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SignupView: View {
     var body: some View {
-        NavigationView{
-            WelcomeView()
-        }
-        
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    ContentView()
+    SignupView()
 }
