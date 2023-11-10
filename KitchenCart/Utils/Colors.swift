@@ -25,3 +25,6 @@ extension Color {
         self.init(red: red, green: green, blue: blue)
     }
 }
+
+
+let backgroundColor =  Color(hex:"1e1e1e")

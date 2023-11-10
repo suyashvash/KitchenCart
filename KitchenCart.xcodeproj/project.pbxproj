@@ -16,6 +16,8 @@
 		D6AAE1E92AFD649B00940CE5 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAE1E82AFD649B00940CE5 /* SignupView.swift */; };
 		D6AAE1EC2AFD6DE500940CE5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6AAE1EB2AFD6DE500940CE5 /* Colors.swift */; };
 		D6AAE1F32AFD771600940CE5 /* openSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D6AAE1F22AFD771600940CE5 /* openSans.ttf */; };
+		D6D1E7862AFECB0000A84AA2 /* NavigationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D1E7852AFECB0000A84AA2 /* NavigationButton.swift */; };
+		D6D1E78A2AFECDFE00A84AA2 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D1E7892AFECDFE00A84AA2 /* MainApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D6AAE1EB2AFD6DE500940CE5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		D6AAE1F12AFD76BC00940CE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D6AAE1F22AFD771600940CE5 /* openSans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = openSans.ttf; path = KitchenCart/openSans.ttf; sourceTree = "<group>"; };
+		D6D1E7852AFECB0000A84AA2 /* NavigationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationButton.swift; sourceTree = "<group>"; };
+		D6D1E7892AFECDFE00A84AA2 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 		D6AAE1D32AFD63AB00940CE5 /* KitchenCart */ = {
 			isa = PBXGroup;
 			children = (
+				D6D1E7842AFECAE800A84AA2 /* Components */,
 				D6AAE1F12AFD76BC00940CE5 /* Info.plist */,
 				D6AAE1EA2AFD6DD500940CE5 /* Utils */,
 				D6AAE1E22AFD642600940CE5 /* Views */,
@@ -85,6 +90,7 @@
 		D6AAE1E22AFD642600940CE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D6D1E7882AFECDF100A84AA2 /* MainApp */,
 				D6AAE1E72AFD648200940CE5 /* OnBoardingViews */,
 			);
 			path = Views;
@@ -106,6 +112,22 @@
 				D6AAE1EB2AFD6DE500940CE5 /* Colors.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D6D1E7842AFECAE800A84AA2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D6D1E7852AFECB0000A84AA2 /* NavigationButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D6D1E7882AFECDF100A84AA2 /* MainApp */ = {
+			isa = PBXGroup;
+			children = (
+				D6D1E7892AFECDFE00A84AA2 /* MainApp.swift */,
+			);
+			path = MainApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,11 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6D1E7862AFECB0000A84AA2 /* NavigationButton.swift in Sources */,
 				D6AAE1D72AFD63AB00940CE5 /* ContentView.swift in Sources */,
 				D6AAE1EC2AFD6DE500940CE5 /* Colors.swift in Sources */,
 				D6AAE1E42AFD645E00940CE5 /* WelcomeView.swift in Sources */,
 				D6AAE1E62AFD647500940CE5 /* LoginView.swift in Sources */,
 				D6AAE1D52AFD63AB00940CE5 /* KitchenCartApp.swift in Sources */,
+				D6D1E78A2AFECDFE00A84AA2 /* MainApp.swift in Sources */,
 				D6AAE1E92AFD649B00940CE5 /* SignupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

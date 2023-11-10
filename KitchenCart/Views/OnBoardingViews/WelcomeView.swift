@@ -56,7 +56,7 @@ struct WelcomeView: View {
             )
         .padding(.all,20)
         
-        .background(Color(hex:"1e1e1e"))
+        .background(backgroundColor)
     }
 }
 

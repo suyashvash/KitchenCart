@@ -9,37 +9,87 @@ import SwiftUI
 
 struct LoginView: View {
     @State private var username: String = ""
-    @FocusState private var emailFieldIsFocused: Bool
+    @State private var password: String = ""
+
 
     
     var body: some View {
         VStack{
-            Text("Login")
+            Image("icon")
+                .resizable()
+                .frame(width: 100,height:100,alignment: .center)
+            
+            Text("Welcome Back !")
                 .foregroundColor(.white)
-                .font(.system(size: 28))
+                .font(.system(size:30))
                 .fontWeight(.bold)
+                .padding(.bottom,30)
             
-            VStack{
-                Text("Email")
+            VStack(alignment:.leading){
+                Text("Username")
                     .foregroundColor(.gray)
-                    .font(.system(size: 16))
-                TextField(
-                        "Ex - john@exmapl.com",
-                        text: $username
-                    )
-                    .focused($emailFieldIsFocused)
-                    .textInputAutocapitalization(.never)
-                    .disableAutocorrection(true)
-                    .border(.primary)
-                    .foregroundColor(.white)
-            
+                    .font(.system(size: 14))
+                    .padding(10)
+                TextField("Ex - John", text: $username)
+                    .font(.system(size:18))
+                      .foregroundColor(.white)
+                      .padding(.vertical,0)
+                      .padding(.horizontal,10)
+                      .cornerRadius(10)
+                
+             
+                Divider()
+                 .frame(height: 1)
+                 .padding(.horizontal, 30)
+                 .background(Color.gray)
+                 .padding(10)
                 
                 Text("Password")
                     .foregroundColor(.gray)
-                    .font(.system(size: 16))
+                    .font(.system(size: 14))
+                    .padding(10)
+                SecureField("Your Password", text: $password)
+                    .font(.system(size:18))
+                      .foregroundColor(.white)
+                      .padding(.vertical,0)
+                      .padding(.horizontal,10)
+                      .cornerRadius(10)
+             
+                Divider()
+                 .frame(height: 1)
+                 .padding(.horizontal, 30)
+                 .background(Color.gray)
+                 .padding(10)
+                
+                
+                NavigationButton(
+                    destination: {
+                        MainApp()
+                    },
+                    label: "Login"
+                )
+                
+                
+                NavigationLink(
+                    destination: SignupView(),
+                    label:{
+                        Text("Don't have an account ? Register Now !")
+                            .font(.system(size: 14))
+                            .foregroundColor(.white)
+                            .padding(.top,20)
+                    }
+                
+                )
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    alignment: .center
+                  )
+                
         
             }
-            .padding(.all,10)
+
+            .padding(10)
 
                 
         }
@@ -50,9 +100,9 @@ struct LoginView: View {
               maxHeight: .infinity,
               alignment: .center
             )
-        .padding(.all,20)
+        .padding(.all,10)
         
-        .background(Color(hex:"1e1e1e"))
+        .background(backgroundColor)
     }
 }
 
