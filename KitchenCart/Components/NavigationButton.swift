@@ -10,6 +10,8 @@ import SwiftUI
 
 struct NavigationButton<Destination: View>: View {
     
+    @State private var isViewActive = false
+    
     let destination: () -> Destination
     let label: String
     let buttonWidth: CGFloat
@@ -25,6 +27,7 @@ struct NavigationButton<Destination: View>: View {
     var body: some View {
         NavigationLink(
             destination: destination(),
+            isActive: $isViewActive,
             label: {
                 Text(label)
                     .frame(

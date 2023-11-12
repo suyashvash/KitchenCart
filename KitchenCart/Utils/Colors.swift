@@ -28,3 +28,4 @@ extension Color {
 
 
 let backgroundColor =  Color(hex:"1e1e1e")
+let whitesmoke = Color(hex:"eaebec")

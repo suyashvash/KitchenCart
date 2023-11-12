@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LoginView: View {
+    
+    @ObservedObject var user = User()
+    
     @State private var username: String = ""
     @State private var password: String = ""
 
@@ -68,6 +71,32 @@ struct LoginView: View {
                     },
                     label: "Login"
                 )
+                
+//                Button(
+//                    action: {
+//                        withAnimation(.easeInOut(duration:1.0)){
+//                            self.user.loggedIn = true
+//                        }
+//                    },
+//                    label:{
+//                        Text("Login")
+//                            .frame(
+//                                width: 300,
+//                                height: 50,
+//                                alignment: .center
+//                            )
+//                            .foregroundColor(.black)
+//                            .background(Color.white)
+//                            .cornerRadius(8)
+//                    }
+//                    
+//                
+//                ).frame(
+//                    minWidth: 0,
+//                    maxWidth: .infinity,
+//                    alignment: .center
+//                )
+//                .padding(.top, 20)
                 
                 
                 NavigationLink(

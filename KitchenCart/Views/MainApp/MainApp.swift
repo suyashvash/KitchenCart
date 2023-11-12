@@ -9,10 +9,25 @@ import SwiftUI
 
 struct MainApp: View {
     var body: some View {
-        Text("Hello, World!")
-    }
+        TabView{
+            HomeView()
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+            
+            CartView()
+                .tabItem {
+                    Label("Cart", systemImage: "cart.fill")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.fill")
+                }
+        }    }
 }
 
 #Preview {
     MainApp()
+       
 }
