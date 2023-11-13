@@ -9,98 +9,119 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack(){
-            HStack{
-                VStack(alignment:.leading){
-                    Text("Choose your ✨")
-                        .font(.system(size: 16))
-                        .fontWeight(.bold)
-                    Text("New Kitchen Asthetics")
-                        .font(.system(size: 20))
-                    
-                }
-                Spacer()
-                NavigationLink(
-                    destination: Text("Search Screen"),
-                    label:{
-                        Image(systemName: "magnifyingglass")
+        ScrollView{
+                HStack{
+                    VStack(alignment:.leading){
+                        Text("Choose your ✨")
+                            .font(.system(size: 16))
+                            .fontWeight(.bold)
+                        Text("New Kitchen Asthetics")
+                            .font(.system(size: 20))
+                        
+                    }
+                    Spacer()
+                    NavigationLink(
+                        destination: Text("Search Screen"),
+                        label:{
+                            Image(systemName: "magnifyingglass")
                                 .resizable()
                                 .frame(width: 20, height: 20)
+                        }
+                    )
+                    
+                }
+                
+                VStack(alignment:.leading){
+                    Text("Categories")
+                        .fontWeight(.bold)
+                    ScrollView(.horizontal){
+                        HStack(spacing:0){
+                            CategoryCard(category: "Utensils")
+                            CategoryCard(category: "Ovens")
+                            CategoryCard(category: "Fridges")
+                            CategoryCard(category: "Groceries")
+                            CategoryCard(category: "Ovens")
+                            CategoryCard(category: "Utensils")
+                            
+                        }
+                        .padding(.vertical,10)
                     }
+                   
+                   
+                    
+                }
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity,
+                    alignment: .topLeading
                 )
+                .padding(.top,20)
                 
-            }
-            
-            VStack(alignment:.leading){
-                Text("Categories")
-                    .fontWeight(.bold)
-                HStack{
-                    CategoryCard()
-                    CategoryCard()
-                    CategoryCard()
-
-                }
-                .padding(.top,10)
                 
-            }
-            .frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                alignment: .topLeading
-              )
-            .padding(.top,30)
-            
-            
-            VStack(alignment:.leading){
-                Text("Latest Pick")
-                    .fontWeight(.bold)
-                HStack(alignment:.center){
-                    ProductTile(
-                        title: "Regualar Pan", 
-                        price: "$ 32.405",
-                        id: "1231abbs"
-                    )
-                    ProductTile(
-                        title: "Regualar Pan",
-                        price: "$ 32.405",
-                        id: "1231abbs"
-                    )
+                VStack(alignment:.leading){
+                    Text("Latest Pick")
+                        .fontWeight(.bold)
+                        .padding(.bottom,10)
+
+                    LazyVGrid(
+                        columns: [
+                            GridItem(.flexible()), GridItem(.flexible()),
+                        ],
+                        alignment: .center,
+                        spacing: 10,
+                        pinnedViews: [],
+                        content: {
+                            ProductTile(
+                                title: "Regualar Pan",
+                                price: "$ 32.405",
+                                id: "1231abbs"
+                            )
+                            ProductTile(
+                                title: "Regualar Pan",
+                                price: "$ 32.405",
+                                id: "1231abbs"
+                            )
+                            ProductTile(
+                                title: "Regualar Pan",
+                                price: "$ 32.405",
+                                id: "1231abbs"
+                            )
+                            ProductTile(
+                                title: "Regualar Pan",
+                                price: "$ 32.405",
+                                id: "1231abbs"
+                            )
+                            ProductTile(
+                                title: "Regualar Pan",
+                                price: "$ 32.405",
+                                id: "1231abbs"
+                            )
+                            ProductTile(
+                                title: "Regualar Pan",
+                                price: "$ 32.405",
+                                id: "1231abbs"
+                            )
+                        })
+                    .onAppear{
+                    }
+                    
                 }
-                .padding(.top,10)
-                HStack(alignment:.center){
-                    ProductTile(
-                        title: "Regualar Pan",
-                        price: "$ 32.405",
-                        id: "1231abbs"
-                    )
-                    ProductTile(
-                        title: "Regualar Pan",
-                        price: "$ 32.405",
-                        id: "1231abbs"
-                    )
-                }
-                .padding(.top,10)
+                .frame(
+                    minWidth: 0,
+                    maxWidth: .infinity
+                )
+                .padding(.vertical,20)
                 
-            }
-            .frame(
-                minWidth: 0,
-                maxWidth: .infinity,
-                alignment: .topLeading
-              )
-            .padding(.vertical,30)
+                
+                
+            
+            
+            
+        }
+        .frame(maxHeight: .infinity)
+        .padding([.top,.horizontal],20)
 
-           
-          
-        }.frame(
-            minWidth: 0,
-            maxWidth: .infinity,
-            minHeight: 0,
-            maxHeight: .infinity,
-            alignment: .topLeading
-          )
-      .padding(.all,20)
-        
-
+ 
     }
 }
 

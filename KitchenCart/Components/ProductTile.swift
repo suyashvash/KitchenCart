@@ -20,25 +20,20 @@ struct ProductTile : View {
         VStack(alignment:.center){
             Image("teaPan")
                 .resizable()
-                .frame(width: 100,height:100,alignment: .center)
-                .padding(10)
-            Text(title)
-                .font(.system(size: 14))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                
-            
-            Text(price)
-                .font(.system(size: 12))
-                .fontWeight(.thin)
-                .padding(.top,1)
-                .padding(.bottom,15)
-                
-            
+                .aspectRatio(contentMode: .fit)
+                .padding(.bottom,5)
+                .cornerRadius(10)
+            VStack{
+                Text(title)
+                    .font(.system(size: 14))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                Text(price)
+                    .font(.system(size: 12))
+                    .fontWeight(.thin)
+            }.padding(.bottom,10)
         }
-        .frame(
-            width: 150
-       
-        )
+        
+        .frame(width: 150)
         .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(whitesmoke, lineWidth: 1)

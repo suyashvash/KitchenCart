@@ -10,12 +10,16 @@ import SwiftUI
 
 
 struct CategoryCard : View {
+    
+    
+    let category : String
+    
     var body: some View {
         VStack{
-            Image("utensils")
+            Image(category.lowercased())
                 .resizable()
-                .frame(width: 40,height:40,alignment: .center)
-            Text("Utensils")
+                .frame(width: 30,height:30,alignment: .center)
+            Text(category)
                 .font(.system(size: 14))
         }
         .frame(

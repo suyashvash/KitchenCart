@@ -14,17 +14,28 @@ struct MainApp: View {
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
+             
             
             CartView()
                 .tabItem {
                     Label("Cart", systemImage: "cart.fill")
                 }
             
+            
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }
-        }    }
+        }
+        .onAppear {
+            let appearance = UITabBarAppearance()
+            appearance.backgroundColor = UIColor.black
+            UITabBar.appearance().standardAppearance = appearance
+            UITabBar.appearance().scrollEdgeAppearance = appearance
+        }
+       
+        
+    }
 }
 
 #Preview {
