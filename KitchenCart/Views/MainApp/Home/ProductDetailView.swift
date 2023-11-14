@@ -31,6 +31,7 @@ struct ProductDetailView: View {
                 Text(product.name)
                     .font(.system(size: 22))
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .foregroundStyle(darkGreen)
                 
                 Text(product.description)
                     .foregroundStyle(.gray)
@@ -93,6 +94,7 @@ struct ProductDetailView: View {
                         Text(product.price)
                             .font(.system(size: 22))
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .foregroundStyle(darkGreen)
                             .frame(maxWidth: .infinity, alignment: .leading)
                     }
     
@@ -109,7 +111,7 @@ struct ProductDetailView: View {
                                     alignment: .center
                                 )
                                 .foregroundColor(.white)
-                                .background(Color.black)
+                                .background(darkGreen)
                                 .cornerRadius(8)
                         }
     

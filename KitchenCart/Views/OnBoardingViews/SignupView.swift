@@ -28,7 +28,7 @@ struct SignupView: View {
             
             VStack(alignment:.leading){
                 Text("Email")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .font(.system(size: 14))
                     .padding(10)
                 TextField("Ex - John", text: $username)
@@ -46,7 +46,7 @@ struct SignupView: View {
                  .padding(10)
                 
                 Text("Password")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .font(.system(size: 14))
                     .padding(10)
                 SecureField("Your Password", text: $password)
@@ -64,7 +64,7 @@ struct SignupView: View {
                 
                 
                 Text("Confirm Password")
-                    .foregroundColor(.gray)
+                    .foregroundColor(.white)
                     .font(.system(size: 14))
                     .padding(10)
                 SecureField("Re Password", text: $confirmPassword)

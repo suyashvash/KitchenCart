@@ -14,6 +14,7 @@ struct CartView: View {
                 Text("My Cart")
                     .font(.system(size: 30))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundStyle(darkGreen)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom,30)
                 CartTile(item:demoCartItem)
@@ -22,6 +23,16 @@ struct CartView: View {
                 
             }
             .padding(20)
+            
+            NavigationButton(
+                destination: {
+                    CheckoutView()
+                },
+                label: "Checkout",
+                buttonWidth:350,
+                theme:"dark"
+      
+            )
         }
     }
 }

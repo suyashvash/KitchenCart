@@ -25,7 +25,9 @@ extension Color {
         self.init(red: red, green: green, blue: blue)
     }
 }
+let darkGreen = Color(hex: "178f51")
 
-
-let backgroundColor =  Color(hex:"1e1e1e")
+let backgroundColor =  darkGreen
+//Color(hex:"1e1e1e")
 let whitesmoke = Color(hex:"eaebec")
+

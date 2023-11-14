@@ -14,3 +14,5 @@ class User : ObservableObject{
     @Published var username : String = ""
     @Published var userId : String = ""
 }
+
+

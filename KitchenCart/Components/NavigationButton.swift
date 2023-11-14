@@ -16,12 +16,14 @@ struct NavigationButton<Destination: View>: View {
     let label: String
     let buttonWidth: CGFloat
     let buttonHeight: CGFloat
+    let theme : String
     
-    init(destination: @escaping () -> Destination, label: String, buttonWidth: CGFloat = 300, buttonHeight: CGFloat = 50) {
+    init(destination: @escaping () -> Destination, label: String, buttonWidth: CGFloat = 300, buttonHeight: CGFloat = 50,theme:String = "light") {
         self.destination = destination
         self.label = label
         self.buttonWidth = buttonWidth
         self.buttonHeight = buttonHeight
+        self.theme = theme
     }
     
     var body: some View {
@@ -35,8 +37,8 @@ struct NavigationButton<Destination: View>: View {
                         height: buttonHeight,
                         alignment: .center
                     )
-                    .foregroundColor(.black)
-                    .background(Color.white)
+                    .foregroundColor(self.theme=="light"  ? darkGreen : .white)
+                    .background(self.theme=="light"  ? .white : darkGreen)
                     .cornerRadius(8)
             }
         )

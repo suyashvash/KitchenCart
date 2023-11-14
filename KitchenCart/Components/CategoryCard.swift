@@ -15,8 +15,10 @@ struct CategoryCard: View {
             Image(category.lowercased())
                 .resizable()
                 .frame(width: 30,height:30,alignment: .center)
+               
             Text(category)
                 .font(.system(size: 14))
+        
         }
         .frame(
             width: 80,

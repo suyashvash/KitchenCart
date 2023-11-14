@@ -31,9 +31,11 @@ struct MainApp: View {
         .accentColor(Color.white)
         .onAppear {
             let appearance = UITabBarAppearance()
-            appearance.backgroundColor = UIColor.black
+            appearance.backgroundColor = UIColor(darkGreen)
             UITabBar.appearance().standardAppearance = appearance
             UITabBar.appearance().scrollEdgeAppearance = appearance
+          
+       
         }
        
         

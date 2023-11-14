@@ -16,7 +16,7 @@ struct WelcomeView: View {
                 .font(.system(size: 33))
                 .frame(maxWidth: .infinity, alignment: .leading)
             Text("All your kitchen needs at one stop !")
-                .foregroundColor(.gray)
+                .foregroundColor(.white)
                 .font(.subheadline)
                 .padding(.top,10)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -56,7 +56,7 @@ struct WelcomeView: View {
             )
         .padding(.all,20)
         
-        .background(backgroundColor)
+        .background(Color(hex:"1e1e1e"))
     }
 }
 

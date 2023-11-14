@@ -17,17 +17,19 @@ struct HomeView: View {
                         Text("Choose your ✨")
                             .font(.system(size: 16))
                             .fontWeight(.bold)
+                            .foregroundStyle(darkGreen)
                         Text("New Kitchen Asthetics")
                             .font(.system(size: 20))
                         
                     }
                     Spacer()
                     NavigationLink(
-                        destination: Text("Search Screen"),
+                        destination: SearchView(text: .constant("")),
                         label:{
                             Image(systemName: "magnifyingglass")
                                 .resizable()
                                 .frame(width: 20, height: 20)
+                                .foregroundStyle(darkGreen)
                         }
                     )
                     
@@ -36,6 +38,7 @@ struct HomeView: View {
                 VStack(alignment:.leading){
                     Text("Categories")
                         .fontWeight(.bold)
+                        .foregroundStyle(darkGreen)
                     ScrollView(.horizontal){
                         HStack(spacing:0){
                             CategoryCard(category: "Utensils")
@@ -64,6 +67,7 @@ struct HomeView: View {
                     Text("Latest Pick")
                         .fontWeight(.bold)
                         .padding(.bottom,10)
+                        .foregroundStyle(darkGreen)
 
                     LazyVGrid(
                         columns: [

@@ -12,6 +12,7 @@ struct CartTile: View {
     let item : CartItem
     
     var body: some View {
+        
         HStack(alignment:.top){
             Image(item.image)
                 .resizable()
@@ -29,6 +30,7 @@ struct CartTile: View {
                 Text(item.price)
                     .fontWeight(.bold)
                     .font(.system(size: 20))
+                    .foregroundStyle(darkGreen)
                 
                 HStack{
                     Button(action: {},
@@ -41,15 +43,16 @@ struct CartTile: View {
                     })
                     .padding(10)
                     
-                    Text(item.price)
+                    Text("\(item.quantity)")
                         .font(.system(size: 18))
                         .padding(.horizontal,10)
+                
                     
                     Button(action: {},
                            label:{
                         Image(systemName: "minus")
                             .resizable()
-                            .frame(width: 15, height: 15)
+                            .frame(width: 15, height: 2)
                             .foregroundStyle(.black)
                           
                     })
