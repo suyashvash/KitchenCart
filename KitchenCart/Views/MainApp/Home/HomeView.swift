@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+
     var body: some View {
         ScrollView{
                 HStack{
@@ -71,36 +73,12 @@ struct HomeView: View {
                         spacing: 10,
                         pinnedViews: [],
                         content: {
-                            ProductTile(
-                                title: "Regualar Pan",
-                                price: "$ 32.405",
-                                id: "1231abbs"
-                            )
-                            ProductTile(
-                                title: "Regualar Pan",
-                                price: "$ 32.405",
-                                id: "1231abbs"
-                            )
-                            ProductTile(
-                                title: "Regualar Pan",
-                                price: "$ 32.405",
-                                id: "1231abbs"
-                            )
-                            ProductTile(
-                                title: "Regualar Pan",
-                                price: "$ 32.405",
-                                id: "1231abbs"
-                            )
-                            ProductTile(
-                                title: "Regualar Pan",
-                                price: "$ 32.405",
-                                id: "1231abbs"
-                            )
-                            ProductTile(
-                                title: "Regualar Pan",
-                                price: "$ 32.405",
-                                id: "1231abbs"
-                            )
+                            ProductTile(product: demoProduct)
+                            ProductTile(product: demoProduct)
+                            ProductTile(product: demoProduct)
+                            ProductTile(product: demoProduct)
+                            ProductTile(product: demoProduct)
+                            ProductTile(product: demoProduct)
                         })
                     .onAppear{
                     }

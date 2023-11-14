@@ -2,16 +2,12 @@
 //  CategoryCard.swift
 //  KitchenCart
 //
-//  Created by Suyash Vashishtha on 13/11/23.
+//  Created by Suyash Vashishtha on 14/11/23.
 //
 
-import Foundation
 import SwiftUI
 
-
-struct CategoryCard : View {
-    
-    
+struct CategoryCard: View {
     let category : String
     
     var body: some View {
@@ -36,4 +32,8 @@ struct CategoryCard : View {
         .shadow(color: whitesmoke, radius: 5, x: 1, y: 1)
 
     }
+}
+
+#Preview {
+    CategoryCard(category:"Utensils")
 }

@@ -9,7 +9,20 @@ import SwiftUI
 
 struct CartView: View {
     var body: some View {
-        Text("Cart View")
+        ScrollView{
+            VStack(){
+                Text("My Cart")
+                    .font(.system(size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.bottom,30)
+                CartTile(item:demoCartItem)
+                CartTile(item:demoCartItem)
+                
+                
+            }
+            .padding(20)
+        }
     }
 }
 

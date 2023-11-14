@@ -27,6 +27,8 @@ struct MainApp: View {
                     Label("Profile", systemImage: "person.fill")
                 }
         }
+        .navigationBarHidden(true)
+        .accentColor(Color.white)
         .onAppear {
             let appearance = UITabBarAppearance()
             appearance.backgroundColor = UIColor.black
